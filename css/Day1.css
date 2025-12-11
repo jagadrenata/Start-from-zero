@@ -121,13 +121,13 @@ nav>div>div>ul>li>a {
   grid-template-columns: 1fr;
 }
 .project-card {
+  display: block;
   background-color: #353637;
   color: var(--color-text-light);
   padding: 1rem;
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
   cursor: pointer;
-  text-decoration-line: none;
 }
 .project-card>img {
   width: 100%;
