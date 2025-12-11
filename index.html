@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  
+</head>
+<body>
+  <!-- header -->
+  <div class="hero">
+    <div class="container">
+      <h1>become a full-stack developer whitin April 2026</h1>
+      <h4>hello my friend, i'll become a full-stack developer before 3 months after january 2026. and this website showing my project who i created. enjoy guys</h4>
+    </div>
+  </div>
+  
+  <!-- content -->
+  <div class="content">
+    <div class="container">
+      <!-- Projects -->
+      <h3>Projects</h3>
+      <div class="project-wrapper">
+        <div class="project-card" id="card1"></div>
+        <div class="project-card" id="card2"></div>
+        <div class="project-card" id="card3"></div>
+        <div class="project-card" id="card4"></div>
+      </div>
+      
+      <!-- roadmap -->
+<!--       <h3>Roadmap</h3>
+<div>
+  <table border="1" cellpadding="0">
+     <thead>
+       <tr>
+         <th>date</th>
+         <th>purpuse</th>
+         <th>time</th>
+         <th>language</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>6/12/2025</td>
+         <td>crete home page to show my future project</td>
+         <td>4 hours</td>
+         <td>html, css</td>
+       </tr>
+     </tbody>
+  </table>
+</div> -->
+    </div>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+     const projects = [
+        {
+          title: "Website Title 1",
+          desc: "Dolore sunt nisi mollit veniam aute dolor est anim Lorem esse",
+          badge: "html"
+        },
+        {
+          title: "Website Title 2",
+          desc: "Nisi nulla laboris aliquip mollit nulla id excepteur laboris",
+          badge: "css"
+        },
+        {
+          title: "Website Title 3",
+          desc: "Veniam consequat proident nisi nulla laboris aliquip",
+          badge: "javascript"
+        },
+        {
+          title: "Website Title 4",
+          desc: "Amet sunt labore dolore anim esse cupidatat",
+          badge: "react"
+        },
+    ]
+    
+    const makeCardHTML = (p) => `
+          <div class="card-content">
+            <h4>${p.title}</h4>
+            <p>${p.desc}</p>
+            <div class="project-badge-wrapper">
+              <p class="project-badge">${p.badge}</p>
+            </div>
+          </div>
+          `
+      
+    const cards = document.querySelectorAll(".project-card")
+    
+    cards.forEach((card, i) => {
+      const data = projects[i]
+      
+      card.addEventListener("mouseenter", () => {
+        card.innerHTML = makeCardHTML(data)
+        requestAnimationFrame(() => {
+          card.querySelector('.card-content').classList.add('show')
+        })
+      })
+      
+  
+      card.addEventListener("mouseleave", () => {
+        card.innerHTML = ""
+      })
+    })
+    console.log(cards)
+  </script>
+</body>
+</html>
