@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Day 1 - landing page using html and css</title>
-  <link rel="stylesheet" href="../css/Day1.css" type="text/css" media="all" />
+  <title>Day 2 - landing page using html and css</title>
+  <link rel="stylesheet" href="../css/Day2.css" type="text/css" media="all" />
 </head>
 <body id="home">
   <!-- navbar -->
@@ -27,7 +27,27 @@
           <a href="#contact">contact</a>
         </li>
       </ul>
-      <span>|||</span>
+      <div class="nav-hamburger">
+        <button id="hamburger">|||</button>
+        <div class="nav-rounded">
+          <ul class="nav-sidebar">
+            <li>
+              <a href="#home">home</a>
+            </li>
+            <li>
+              <a href="#about">about</a>
+            </li>
+            <li>
+              <a href="#project">project</a>
+            </li>
+            <li>
+              <a href="#contact">contact</a>
+            </li>
+            <li><button id="close-hamburger">close</button></li>
+          </ul>
+          
+        </div>
+      </div>
     </div>
     </div>
   </nav>
@@ -111,5 +131,24 @@
     <span>SOCIAL ICON DITARUH BESOK KETIKA MATERI DOM</span>
     </div>
   </footer>
+  <script>
+    const hamburger = document.getElementById("hamburger")
+    const closeHamburger = document.getElementById("close-hamburger")
+    hamburger.addEventListener("click", () => {
+      document.querySelector('.nav-rounded').classList.add('active');
+      document.querySelectorAll(".nav-sidebar>li").forEach(li => {
+        li.classList.add("active")
+      })
+      closeHamburger.classList.add("active")
+    })
+    
+    closeHamburger.addEventListener("click", () => {
+      document.querySelector('.nav-rounded').classList.remove('active');
+      document.querySelectorAll(".nav-sidebar>li").forEach(li => {
+        li.classList.remove("active")
+      })
+      closeHamburger.classList.remove("active")
+    })
+  </script>
 </body>
 </html>

@@ -21,16 +21,3 @@ const projects = [
     },
 ]
 
-const makeCardHTML = (p) => `
-      <div>
-        <h4>${p.title}</h4>
-        <p>${p.desc}</p>
-        <div class="project-badge-wrapper">
-          <div class="project-badge">${p.badge}</div>
-        </div>
-      </div>
-  `
-  
-const cards = document.querySelectorAll(".project-card")
-
-console.log(cards)
