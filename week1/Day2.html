@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Day 2 - landing page using html and css</title>
   <link rel="stylesheet" href="../css/Day2.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
 </head>
 <body id="home">
   <!-- navbar -->
@@ -86,69 +87,115 @@
           <span class="project-badge">css</span>
         </div>
       </a>
-      <a href="https://www.renn.biz.id" class="project-card">
-        <img src="../assets/images/homepage-seen-computer-screen_23-2149416723.jpg" alt="project image"/>
-        <h3>project title</h3>
-        <p>project desc esse eu qui nulla excepteur eu sunt in reprehenderit laborumest.</p>
-        <div>
-          <span class="project-badge">html</span>
-          <span class="project-badge">css</span>
-        </div>
-      </a>
-      <a href="https://www.renn.biz.id" class="project-card">
-        <img src="../assets/images/homepage-seen-computer-screen_23-2149416723.jpg" alt="project image"/>
-        <h3>project title</h3>
-        <p>project desc esse eu qui nulla excepteur eu sunt in reprehenderit laborumest.</p>
-        <div>
-          <span class="project-badge">html</span>
-          <span class="project-badge">css</span>
-        </div>
-      </a>
-      <a href="https://www.renn.biz.id" class="project-card">
-        <img src="../assets/images/homepage-seen-computer-screen_23-2149416723.jpg" alt="project image"/>
-        <h3>project title</h3>
-        <p>project desc esse eu qui nulla excepteur eu sunt in reprehenderit laborumest.</p>
-        <div>
-          <span class="project-badge">html</span>
-          <span class="project-badge">css</span>
-        </div>
-      </a>
-      <a href="https://www.renn.biz.id" class="project-card">
-        <img src="../assets/images/homepage-seen-computer-screen_23-2149416723.jpg" alt="project image"/>
-        <h3>project title</h3>
-        <p>project desc esse eu qui nulla excepteur eu sunt in reprehenderit laborumest.</p>
-        <div>
-          <span class="project-badge">html</span>
-          <span class="project-badge">css</span>
-        </div>
-      </a>
     </div>
   </section>
   
   <footer>
     <div class="container">
     <span>&copy; 2025 <a href="https://www.renn.biz.id" class="text-primary"><strong>JAGAD RENATA</strong></a></span>
-    <span>SOCIAL ICON DITARUH BESOK KETIKA MATERI DOM</span>
+    <span id="social-medias"></span>
     </div>
   </footer>
   <script>
-    const hamburger = document.getElementById("hamburger")
-    const closeHamburger = document.getElementById("close-hamburger")
-    hamburger.addEventListener("click", () => {
-      document.querySelector('.nav-rounded').classList.add('active');
-      document.querySelectorAll(".nav-sidebar>li").forEach(li => {
-        li.classList.add("active")
-      })
-      closeHamburger.classList.add("active")
-    })
+    const projects = [
+        {
+          title: "Website Title 1",
+          img: "../assets/images/homepage-seen-computer-screen_23-2149416723.jpg",
+          link: "https://www.renn.biz.id",
+          desc: "Dolore sunt nisi mollit veniam aute dolor est anim Lorem esse",
+          badges: ["html", "css"]
+        },
+        {
+          link: "https://www.renn.biz.id",
+          img: "../assets/images/homepage-seen-computer-screen_23-2149416723.jpg",
+          title: "Website Title 2",
+          desc: "Nisi nulla laboris aliquip mollit nulla id excepteur laboris",
+          badges: ["html", "css", "js"]
+        },
+        {
+          link: "https://www.renn.biz.id",
+          img: "../assets/images/homepage-seen-computer-screen_23-2149416723.jpg",
+          title: "Website Title 3",
+          desc: "Veniam consequat proident nisi nulla laboris aliquip",
+          badges: ["html", "three.js"]
+        },
+        {
+          link: "https://www.renn.biz.id",
+          img: "../assets/images/homepage-seen-computer-screen_23-2149416723.jpg",
+          title: "Website Title 4",
+          desc: "Amet sunt labore dolore anim esse cupidatat",
+          badges: ["reactjs"]
+        },
+    ]
     
-    closeHamburger.addEventListener("click", () => {
-      document.querySelector('.nav-rounded').classList.remove('active');
-      document.querySelectorAll(".nav-sidebar>li").forEach(li => {
-        li.classList.remove("active")
+    
+      
+    const hamburger = document.getElementById("hamburger");
+    const closeHamburger = document.getElementById("close-hamburger");
+    const navRounded = document.querySelector(".nav-rounded");
+    const navItems = document.querySelectorAll(".nav-sidebar > li");
+  
+    // Fungsi buka menu
+    function openMenu() {
+      navRounded.classList.add("active");
+      navItems.forEach(li => li.classList.add("active"));
+      closeHamburger.classList.add("active");
+    }
+  
+    // Fungsi tutup menu
+    function closeMenu() {
+      navRounded.classList.remove("active");
+      navItems.forEach(li => li.classList.remove("active"));
+      closeHamburger.classList.remove("active");
+    }
+  
+    hamburger.addEventListener("click", openMenu);
+    closeHamburger.addEventListener("click", closeMenu);
+  
+    // Klik item sidebar → close menu
+    navItems.forEach(li => {
+      li.addEventListener("click", closeMenu);
+    });
+    
+    const socialMedias = [
+      {
+        icon: "fa-brands fa-whatsapp",
+        value: "https://wa.me/6288989546234"
+      },
+      {
+        icon: "fa-brands fa-instagram",
+        value: "https://instagram.com/jagadrenata"
+      },
+      {
+        icon: "fa-brands fa-youtube",
+        value: "https://youtube.com/@XioDev"
+      },
+    ]
+    
+    // Projects 
+    const projectCard = (p) => `
+       <a href="${p.link}" class="project-card">
+          <img src="${p.img}" alt="project image"/>
+          <h3>${p.title}</h3>
+          <p>${p.desc}</p>
+          <div>
+          ${p.badges.map(badge => `<span class="project-badge">${badge}</span> `).join("")}
+          </div>
+        </a>
+    `
+    const socialIcon = (p) => `<a href="${p.value}">
+      <i class="${p.icon}"></i>
+    </a>`
+    window.onload = () => {
+      projects.forEach(project => {
+        document.querySelector(".project-wrapper").insertAdjacentHTML("beforeend", projectCard(project))
       })
-      closeHamburger.classList.remove("active")
-    })
+      
+      socialMedias.forEach(socialMedia => {
+        document.getElementById("social-medias").insertAdjacentHTML("beforeend", socialIcon(socialMedia))
+      })
+    }
+    
   </script>
 </body>
 </html>

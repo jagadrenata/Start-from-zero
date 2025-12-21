@@ -54,13 +54,19 @@ nav>div>div>ul {
   display: block;
   transform: rotate(90deg);
 }
+#hamburger {
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: 0px;
+  color: var(--color-text-light);
+}
 .nav-rounded {
   position: absolute;
   width: 0;
   height: 0;
   border-radius: 100%;
   background-color: #353637;
-  transition: width 3s ease, height 3s ease;
+  transition: width 1s ease, height 1s ease;
 }
 .nav-rounded.active {
   width: 500vw;
@@ -81,8 +87,8 @@ nav>div>div>ul {
   padding: 5px 10px;
   margin-top: .3rem;
   background-color: transparent;
-  transition: font-size .7s ease, background-color 1s ease;
-  transition-delay: 2s;
+  transition: font-size .7s ease, background-color .7s ease;
+  transition-delay: .5s;
 }
 .nav-sidebar>li.active {
   background-color: var(--color-background);
@@ -98,8 +104,8 @@ nav>div>div>ul {
   background-color: transparent;
   color: var(--color-text-light);
   border: 0;
-  transition: font-size 1s ease, background-color 1s ease;
-  transition-delay: 2.5s;
+  transition: font-size .8s ease, background-color .8s ease;
+  transition-delay: .4s;
 }
 #close-hamburger.active {
   font-size: 3rem;
@@ -213,6 +219,16 @@ footer>div {
   justify-content: space-between;
   align-items: center;
 }
+#social-medias {
+  display: flex; 
+  gap: 1rem;
+}
+#social-medias>a{
+  color: var(--color-text-primary);
+}
+#social-medias>a>i{
+  font-size: 1.5rem;
+}
 .decor-line-text {
   width: 50px;
   height: 4px;
@@ -274,16 +290,12 @@ footer>div {
 }
 @media (min-width: 992px) {
   .container { max-width: var(--container-max-md); }
-  .project-wrapper { grid-template-columns: 1fr;}
-}
-@media (min-width: 1200px) {
     nav>div>div>ul {
       display: flex;
     }
     .nav-hamburger>button {
       display: none;
     }
-  .container { max-width: var(--container-max-lg); padding-left: var(--container-padding-lg); padding-right: var(--container-padding-lg); }
   .project-wrapper { grid-template-columns: 1fr 1fr;}
   .hero>div:nth-child(2) {
     display: flex
@@ -291,6 +303,10 @@ footer>div {
   .hero>div:nth-child(1)>.hero-image-wrapper {
     display: none;
   }
+}
+@media (min-width: 1200px) {
+  .container { max-width: var(--container-max-lg); padding-left: var(--container-padding-lg); padding-right: var(--container-padding-lg); }
+  .project-wrapper { grid-template-columns: 1fr 1fr 1fr;}
   
   
 }
