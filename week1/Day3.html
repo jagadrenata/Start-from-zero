@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Day3 - Coffe website</title>
+  
   <link rel="stylesheet" href="../css/Day3.css" type="text/css" media="all" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
 </head>
 <body>
   <!-- Navbar -->
   <nav>
     <div class="container">
       <div>
-        <img src="../assets/images/company_logo.png">
+        <img src="../assets/images/day5logo.png">
       </div>
       <div>
-        <ul>
+        <ul id="nav">
           <li><a href="#">home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#" class="btn-primary">Order Online</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" style="bacground-color: #2A2829ff" class="btn-primary">Order Online</a></li>
         </ul>
         <div>
-          |||
+          <i id="open-nav" class="fa-solid fa-bars"></i>
+          <i id="close-nav" class="fa-solid fa-xmark"></i>
         </div>
       </div>
     </div>
@@ -44,11 +48,12 @@
         <div>
           <img src="../assets/images/day3hero.webp">
         </div>
+        <div class="ball-blur"></div>
     </div>
   </section>
   
   <!-- about -->
-  <section class="about">
+  <section id="about" class="about">
     <div class="container">
       <!-- part 1 -->
       <div>
@@ -58,7 +63,7 @@
         <div>
           <h2>Handmade Just For You</h2>
           <p>Our organically grown coffe beans are roasted over an open flame in a one of a kind roaster. There's nothing quite like a cup of Brusseis Brewery coffe</p>
-          <button class="btn-bordered">view our menu</button>
+          <button class="btn-bordered-light">view our menu</button>
         </div>
       </div>
       <!-- part 2 -->
@@ -66,7 +71,7 @@
         <div>
           <h2>Handmade Just For You</h2>
           <p>Our organically grown coffe beans are roasted over an open flame in a one of a kind roaster. There's nothing quite like a cup of Brusseis Brewery coffe</p>
-          <button class="btn-bordered">view our menu</button>
+          <button class="btn-bordered-light">view our menu</button>
         </div>
         <div>
           <img src="../assets/images/16:9.1.jpg">
@@ -76,7 +81,7 @@
   </section>
   
   <!-- Blog -->
-  <section class="blog">
+  <section id="blog" class="blog">
     <div class="container">
       <!-- instagram -->
       <div>
@@ -105,7 +110,7 @@
     </div>
   
   <!-- Locations -->
-  <section class="locations">
+  <section id="locations" class="locations">
     <div class="container">
       <h2>Locations</h2>
       <div>
@@ -138,18 +143,17 @@
   </section>
   
   <!-- Footer -->
-  <footer>
+  <footer id="contact">
     <div class="container"> 
-    
       <div class="footer1">
         <div>
-            <img src="../assets/images/company_logo.png" alt="">
+            <img src="../assets/images/day5logo_light.png" alt="">
           <P>Brewed To Perfection, Served With Love</P>
         </div>
         <div>
           <h4>Join our newsletter to receive exclusive updates, and news!</h4>
           <div>
-            <input type="text" name="" placeholder="Enter Your Email" id="" value="" />
+            <input type="email" name="" placeholder="Enter Your Email" id="" value="" />
             <button>Suscribe</button>
           </div>
         </div>
@@ -170,9 +174,26 @@
       <hr>
       <div class="footer3">
         <p>&copy; Brussels Brewery. All Right Reserved.</p>
-        <p>Powered By <strong><a>CMDigital</a></strong></p>
+        <p>Powered By <strong><a> CMDigital</a></strong></p>
       </div>
     </div>
   </footer>
+  
+  <script type="text/javascript" charset="utf-8">
+    const openNav = document.getElementById("open-nav")
+    const closeNav = document.getElementById("close-nav")
+    const nav = document.getElementById("nav")
+    
+    openNav.addEventListener("click", () => {
+      nav.classList.add("nav-active")
+      closeNav.style.display = 'block'
+      openNav.style.display = 'none'
+    })
+    closeNav.addEventListener("click", () => {
+      nav.classList.remove("nav-active")
+      openNav.style.display = 'block'
+      closeNav.style.display = 'none'
+    })
+  </script>
 </body>
 </html>
