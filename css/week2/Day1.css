@@ -1,0 +1,16 @@
+body {
+    font-size: 15pt;
+}
+.wrapper {
+    overflow-y: auto;
+    height: 300px;
+    scroll-behavior: smooth;
+}
+li {
+    color: #00000077;
+    text-align: center;
+}
+.active {
+    font-weight: bold;
+    color: black;
+}
