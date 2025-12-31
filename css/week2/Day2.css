@@ -48,21 +48,6 @@ p {
     inset -6px -6px 12px var(--light);
 }
 
-.neu-in {
-  background: var(--bg);
-  border-radius: 18px;
-  box-shadow:
-    inset 6px 6px 12px var(--dark),
-    inset -6px -6px 12px var(--light);
-  padding: 16px;
-}
-
-.neu-in:active {
-  box-shadow:
-    8px 8px 16px var(--dark),
-    -8px -8px 16px var(--light);
-}
-
 .neu-link {
   background: var(--bg);
   border-radius: 18px;
@@ -148,6 +133,11 @@ p {
 }
 
 .time h2 {
+  background: var(--bg);
+  border-radius: 18px;
+  box-shadow:
+    inset 6px 6px 12px var(--dark),
+    inset -6px -6px 12px var(--light);
   padding: 12px 20px;
   font-size: 22px;
 }
@@ -158,7 +148,11 @@ p {
 }
 
 /* links*/
-
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
 .links a {
   display: flex;
   align-items: center;
