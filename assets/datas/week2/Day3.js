@@ -43,3 +43,44 @@ export const lrcTheNights = `
 [02:49.21]My father told me
 [02:50.45]
 `.trim()
+
+export const lrcSelfHealing = `
+[00:17.26]Walking in the sunny day
+[00:21.47]I'm starting in the new life
+[00:25.09]Now i'm better than yesterday
+[00:29.39]Without you just myself
+[00:35.69]I'm no longer in sadness
+[00:40.04]Stop to trusting everyone
+[00:45.01]'Cause tonight we will be okay
+[00:54.84]Be yourself for your happy mind
+[00:59.53]Love yourself for your happy life
+[01:02.90]In the end what you need is self healing
+[01:10.32]
+[01:13.42]Be your self for your happy mind
+[01:17.91]Love yourself for your happy life
+[01:21.66]In the end all you need is happiness
+[01:30.16]Just do anything what you want
+[01:34.81]Just don't care what people say to you
+[01:39.80]That's your life not their life
+[01:44.68]Break the rules
+[01:48.70]You are stronger than you know
+[01:53.05]Don't ever wish to everyone
+[01:58.10]'Cause tonight we will be okay
+[02:05.72]
+[02:08.32]Be yourself for your happy mind
+[02:12.70]Love yourself for your happy life
+[02:16.89]In the end what you need is self healing
+[02:24.05]
+[02:26.47]Be your self for your happy mind
+[02:31.08]Love yourself for your happy life
+[02:34.74]In the end all you need is happiness
+[02:41.97]
+[03:21.02]Be yourself for your happy mind
+[03:25.78]Love yourself for your happy life
+[03:29.73]In the end what you need is self healing
+[03:37.00]
+[03:39.47]Be your self for your happy mind
+[03:44.12]Love yourself for your happy life
+[03:48.05]In the end all you need is happiness
+[03:53.63]
+`.trim()

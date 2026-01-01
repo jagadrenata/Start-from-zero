@@ -47,6 +47,21 @@ p {
     inset 6px 6px 12px var(--dark),
     inset -6px -6px 12px var(--light);
 }
+.neu-link {
+  background: var(--bg);
+  border-radius: 18px;
+  box-shadow:
+    8px 8px 16px var(--dark),
+    -8px -8px 16px var(--light);
+  padding: 12px;
+}
+
+.neu-link:active {
+  box-shadow:
+    inset 6px 6px 12px var(--dark),
+    inset -6px -6px 12px var(--light);
+}
+
 
 #music-image {
   background: var(--bg);
@@ -167,4 +182,33 @@ button:active {
   width: 60px;
   height: 60px;
   font-size: 1.2rem;
+}
+
+/* music list  */
+
+.music-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 1rem;
+}
+.music-list>div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.links-img {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--bg);
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    inset 4px 4px 8px var(--dark),
+    inset -4px -4px 8px var(--light);
 }

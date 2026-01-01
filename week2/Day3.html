@@ -3,32 +3,32 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 3 - Musics</title>
+    <title>Day 3 - Play a song</title>
     <link rel="stylesheet" href="../css/week2/Day3.css" type="text/css" media="all" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+      
   </head>
   <body>
     <div class="container">
       <div class="neu">
-        <img src="" alt="" />
+        <div id="music-image"></div>
           <div class="lyric-wrapper">
             <ul id="lyric"></ul>
           </div>
-          <div>
-            <h2>judul</h2>
-            <h4>penyanyi</h4>
+          <div id="music-info"></div>
+          <audio id="audio"></audio>
+          <div id="progress-container">
+            <div id="progress"></div>
           </div>
-          <audio src="../assets/musics/week2/Yura Yunita - Merakit (Official Music Video).mp3"></audio>
-          <div>
-            <p>01:20</p>
-            <p>04:58</p>
-          </div>
-          <div>
-            <button>&gt;$&gt;</button>
-            <button><i class="fa-solid fa-play"></i></button>
-            <button><i class="fa-solid fa-forward-step"></i></button>
+          <div id="audio-time"></div>
+          <div class="control-buttons">
+            <button id="backward"><i class="fa-solid fa-backward-step"></i></button>
+            <button id="audio-toggle"><i class="fa-solid fa-play toggle"></i></button>
+            <button id="forward"><i class="fa-solid fa-forward-step"></i></button>
           </div>
       </div>
+      
+      <div class="music-list"></div>
     </div>
     
     <script src="../js/week2/Day3.js" type="module"></script>
