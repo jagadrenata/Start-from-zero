@@ -16,15 +16,15 @@ const playlist = [
   {
     title: "The Nights",
     artist: "Avicii",
-    coverSrc: "../../assets/images/Avicii_Nights_Artwork.jpeg",
-    musicSrc: "../../assets/musics/Avicii - The Nights (Lyrics) _my father told me_.mp3",
+    coverSrc: "../assets/images/Avicii_Nights_Artwork.jpeg",
+    musicSrc: "../assets/musics/Avicii - The Nights (Lyrics) _my father told me_.mp3",
     lrc: lrcTheNights
   },
   {
     title: "Self Healing",
     artist: "Brian Rahmattio",
-    coverSrc: "../../assets/images/Brian Rahmattio - Self Healing.jpeg",
-    musicSrc: "../../assets/musics/Brian Rahmattio - Self Healing ( Music Video ).mp3",
+    coverSrc: "../assets/images/Brian Rahmattio - Self Healing.jpeg",
+    musicSrc: "../assets/musics/Brian Rahmattio - Self Healing ( Music Video ).mp3",
     lrc: lrcSelfHealing
   },
   
